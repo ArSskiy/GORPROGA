@@ -1,0 +1,69 @@
+﻿<Window x:Class="GORPROGA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GORPROGA"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1024" Width="1440" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="611*"/>
+            <ColumnDefinition Width="55*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="852*"/>
+            <RowDefinition Height="56*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/Desktop.png"/>
+        </Grid.Background>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="136*"/>
+                <RowDefinition Height="73*"/>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="81*"/>
+                <RowDefinition Height="425*"/>
+                <RowDefinition Height="102*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="164*"/>
+                <ColumnDefinition Width="283*"/>
+                <ColumnDefinition Width="164*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Вход в клуб"
+                       HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                       FontSize="48" Foreground="White" Margin="155,0"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="Выберите способ авторизации"
+                       HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                       FontSize="30" Foreground="White" Margin="70,0,69,0" Grid.RowSpan="2"/>
+            <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+                <Button Content="Email" Width="265" Background="#333333" Foreground="White" 
+                    FontSize="40"  BorderThickness="0" Click="Button_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#333333" CornerRadius="14">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Separator Width="35" Opacity="0"/>
+                <Button Content="Телефон" Width="265" Background="#333333" Foreground="White" 
+                    FontSize="40"  BorderThickness="0" Click="Button_Click_1">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#333333" CornerRadius="14">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+            <Frame Name="MainFrame" Grid.Row="4" Grid.Column="1"/>
+        </Grid>
+    </Grid>
+</Window>
